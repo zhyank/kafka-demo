@@ -30,7 +30,7 @@ public class KafkaProducerController {
 
     @GetMapping("send2")
     @ResponseBody
-    public boolean send(User user) {
+    public boolean send2(User user) {
         try {
             kafkaTemplate.send("testTopic2", user);
             System.out.println("testTopic2消息发送成功...:"+ user);
